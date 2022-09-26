@@ -1,5 +1,5 @@
 import "./index.css";
-import "./scss/custom.scss";
+// import "./scss/custom.scss";
 import { ApolloClient, ApolloProvider, InMemoryCache, ApolloLink } from "@apollo/client";
 import React from "react";
 import ReactDOM from "react-dom";
