@@ -1,6 +1,6 @@
 import React from "react";
 import '@coreui/coreui/dist/css/coreui.min.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, HashRouter } from 'react-router-dom';
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
@@ -17,7 +17,7 @@ function App() {
       </Header>
       <Body>
         <div className="mx-auto d-grid" style={{width: "600px"}}>
-          <BrowserRouter>
+          <HashRouter basename="/">
             <Routes>
               <Route path="/" element={<Home />}/>
             </Routes>
@@ -27,7 +27,7 @@ function App() {
             <Routes>
               <Route path="/tx/:tx" element={<PostPageFromTx />}/>
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
         </div>
       </Body>
     </Container>

@@ -134,7 +134,7 @@ export function PostCard(data) {
   return (
     <div key={post.id}>
       <CCard className="p-3 postcard border border-0" style={{ width: '40rem' }}>
-        <CLink className="text-black px-2" href={"/id/" + post.id}>
+        <CLink className="text-black px-2" href={"/#/id/" + post.id}>
           <CCardBody>
             <CCardTitle>
               <CAvatar src={avatarData} />  {title}
@@ -159,7 +159,7 @@ export function PostCard(data) {
       {replyPosts.map((post) => 
         <div key={post.id}>
           <CCard className="p-3 postcard border border-0" style={{ width: '40rem' }}>
-            <CLink className="text-black px-2" href={"/id/" + post.id}>
+            <CLink className="text-black px-2" href={"/#/id/" + post.id}>
               <CCardBody>
                 <CCardTitle>
                   <CAvatar src={avatarData} />  {title}
