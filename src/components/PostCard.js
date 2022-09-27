@@ -99,10 +99,12 @@ export function PostCard(data) {
 
   const { data: ensData, isError, isLoading } = useEnsName({
     address: post.senderAddress,
+    chainId: 1,
   })
 
   const { data: avatarData} = useEnsAvatar({
     addressOrName: ensData,
+    chainId: 1,
   })
 
   if (post.length === 0) {
@@ -125,7 +127,7 @@ export function PostCard(data) {
   }
   if (!isError && !isLoading) {
     if (ensData == null) {
-      title = post.senderAddress.substring(0,8);
+      title = post.senderAddress.slice(0,8);
     } else {
       title = ensData
     }
