@@ -1,6 +1,7 @@
 import React from "react";
 import '@coreui/coreui/dist/css/coreui.min.css'
 import { BrowserRouter, Route, Routes, HashRouter } from 'react-router-dom';
+import { CImage, CCol, CLink } from '@coreui/react';
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
@@ -13,6 +14,11 @@ function App() {
   return (
     <Container>
       <Header>
+        <CCol>
+          <CLink className="text-black px-2" href="/">
+            <CImage src="prrot2.png" width={130} height={130} />
+          </CLink>
+        </CCol>
         <ConnectButton showBalance={false}/>
       </Header>
       <Body>
