@@ -166,7 +166,7 @@ export function PostCard(data) {
             <CLink className="text-black px-2" href={"/#/id/" + post.id}>
               <CCardBody>
                 <CLink className="text-black px-2" href={"/#/address/" + post.senderAddress}>
-                  <CCardTitle>
+                  <CCardTitle className="profile">
                     <CAvatar size="lg" src={avatarData} />  {title}
                   </CCardTitle>
                 </CLink>
