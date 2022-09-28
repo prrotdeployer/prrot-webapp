@@ -136,13 +136,13 @@ export function PostCard(data) {
   return (
     <div key={post.id}>
       <CCard className="p-3 postcard border border-0" style={{ width: '40rem' }}>
-        <CLink className="text-black px-2" href={"/#/id/" + post.id}>
+        <CLink className="text-black" href={"/#/id/" + post.id}>
           <CCardBody>
-            <CLink className="text-black px-2" href={"/#/address/" + post.senderAddress}>
-              <CCardTitle className="profile">
+            <CCardTitle>
+              <CLink className="profile text-black" href={"/#/address/" + post.senderAddress}>
                 <CAvatar size="lg" src={avatarData} />  {title}
-              </CCardTitle>
-            </CLink>
+              </CLink>
+            </CCardTitle>
             <CCardText>
               {post.content}
             </CCardText>
@@ -161,15 +161,15 @@ export function PostCard(data) {
       </CCard>
 
       {replyPosts.map((post) => 
-        <div key={post.id}>
+        <div className="m-0" key={post.id}>
           <CCard className="p-3 postcard border border-0" style={{ width: '40rem' }}>
-            <CLink className="text-black px-2" href={"/#/id/" + post.id}>
+            <CLink className="text-black" href={"/#/id/" + post.id}>
               <CCardBody>
-                <CLink className="text-black px-2" href={"/#/address/" + post.senderAddress}>
-                  <CCardTitle className="profile">
+                <CCardTitle>
+                  <CLink className="profile text-black" href={"/#/address/" + post.senderAddress}>
                     <CAvatar size="lg" src={avatarData} />  {title}
-                  </CCardTitle>
-                </CLink>
+                  </CLink>
+                </CCardTitle>
                 <CCardText>
                   {post.content}
                 </CCardText>
@@ -189,7 +189,7 @@ export function PostCard(data) {
         </div>
       )}
 
-      <hr className="solid"/>
+      <hr className="m-0"/>
     </div>
   )
 }
