@@ -32,6 +32,10 @@ hr.solid {
   display: block;
 }
 
+.profile:hover {
+  opacity: 0.7;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }

@@ -138,9 +138,11 @@ export function PostCard(data) {
       <CCard className="p-3 postcard border border-0" style={{ width: '40rem' }}>
         <CLink className="text-black px-2" href={"/#/id/" + post.id}>
           <CCardBody>
-            <CCardTitle>
-              <CAvatar src={avatarData} />  {title}
-            </CCardTitle>
+            <CLink className="text-black px-2" href={"/#/address/" + post.senderAddress}>
+              <CCardTitle className="profile">
+                <CAvatar size="lg" src={avatarData} />  {title}
+              </CCardTitle>
+            </CLink>
             <CCardText>
               {post.content}
             </CCardText>
@@ -163,9 +165,11 @@ export function PostCard(data) {
           <CCard className="p-3 postcard border border-0" style={{ width: '40rem' }}>
             <CLink className="text-black px-2" href={"/#/id/" + post.id}>
               <CCardBody>
-                <CCardTitle>
-                  <CAvatar src={avatarData} />  {title}
-                </CCardTitle>
+                <CLink className="text-black px-2" href={"/#/address/" + post.senderAddress}>
+                  <CCardTitle>
+                    <CAvatar size="lg" src={avatarData} />  {title}
+                  </CCardTitle>
+                </CLink>
                 <CCardText>
                   {post.content}
                 </CCardText>
