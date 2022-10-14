@@ -4,7 +4,8 @@ import { PostCard } from "../components/PostCard";
 import { GET_POST_INFO_FROM_ID } from "../graphql/subgraph";
 import { useParams } from "react-router-dom";
 import { NewPost } from "../components/NewPost";
-import { useNetwork } from 'wagmi'
+import { useNetwork } from 'wagmi';
+import MetaTags from 'react-meta-tags';
 
 function PostPageFromTx() {
   const params = useParams();
@@ -62,6 +63,11 @@ function PostPageFromTx() {
 
   return (
     <div>
+      <MetaTags>
+        <title>Prrot Post - {postInfo.id}</title>
+        <meta name="description" content={postInfo.content} />
+        <meta property="og:title" content={postInfo.senderAddress} />
+      </MetaTags>
       <PostCard post={postInfo} key={postInfo.id}/>
       {newPostBlock}
     </div>

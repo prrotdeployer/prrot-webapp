@@ -39,3 +39,9 @@ hr.solid {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+.timeline {
+  border-right: 0.5px solid black;
+  border-left: 0.5px solid black;
+  border-top: 0.5px solid black;
+}

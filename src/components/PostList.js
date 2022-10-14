@@ -81,7 +81,7 @@ export function PostList() {
   })
 
   return (
-    <div className="d-grid gap-3">
+    <div className="d-grid gap-3 timeline">
       {posts.map((post) => <CRow key={post.id} xs={{ gutterX: 5 }}><PostCard post={post} key={post.id}/></CRow> )}
     </div>
   );
